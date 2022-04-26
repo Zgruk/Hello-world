@@ -8,9 +8,10 @@ class Solution:
         k = len(nums -1)
         while nums[i] != target:
             if target > nums[i]:
-                i += (len(nums) - i)/ 2
-                k = i
-            else:
-                i -= (len(List[j:n]/2)
+                j = i   #previous i if next i bigger
+                i += (k - i)/ 2
+        else:
+                i -= (len(List[j:i] // 2)
+                k = i   #previous i if next smaller
             
         return i
