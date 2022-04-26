@@ -5,13 +5,14 @@ class Solution:
         
         i = (len(nums) - 1) // 2
         j = 0
-        k = len(nums -1)
+        k = len(nums) - 1
         while nums[i] != target:
             if target > nums[i]:
-                j = i   #previous i if next i bigger
-                i += (k - i)/ 2
-        else:
-                i -= (len(List[j:i] // 2)
-                k = i   #previous i if next smaller
+                j = i   #previous i if next i greater
+                i += (k - i) // 2
+            else:
+                k = i   #previous i if next i less
+                i -= (len(nums[j:i+1]) - 1) // 2
+                
             
         return i
