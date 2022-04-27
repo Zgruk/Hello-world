@@ -3,16 +3,15 @@ class Solution:
         if target not in nums:
             return -1
         
-        i = (len(nums) - 1) // 2
+        i = len(nums) // 2
         j = 0
         k = len(nums) - 1
         while nums[i] != target:
             if target > nums[i]:
                 j = i   #previous i if next i greater
-                i += (k - i) // 2
+                i += len(nums[i:k+1]) // 2
             else:
                 k = i   #previous i if next i less
-                i -= (len(nums[j:i+1]) - 1) // 2
-                
-            
+                i -= len(nums[j:i+1]) // 2
+                           
         return i
